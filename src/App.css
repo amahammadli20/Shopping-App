@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url('https://asaransom.com/wp-content/uploads/2018/12/shopping-in-east-aurora-ny-1500x609.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 50px 60px 0 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+nav li a{
+    background-color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.cart ion-icon{
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.cart a{
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Products Section */
+.container,
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.product-info-div img{
+    max-width: 250px;
+    width: 100%;
+}
+
+.product-info-div{
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-info-div h3{
+    text-align: center;
+}
+
+.add-to-cart{
+    position: absolute;
+    width: 100%;
+    background-color: darkgray;
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* by default it's hidden */
+    cursor: pointer;
+    text-align: center;
+}
+
+.product-info-div:hover .cart1,
+.product-info-div:hover .cart2,
+.product-info-div:hover .cart3,
+.product-info-div:hover .cart4{
+    bottom: 80px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.basketNumbers{
+    margin-left: 5px;
+}
+
+/* CART PAGE */
+.container-products{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container-products ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: auto;
+}
+
+.product-header h5{
+    border-bottom: none;
+}
+
+.product-title{
+    width: 45%;
+}
+
+.price{
+    width: 15%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    width: 30%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    width: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.product{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.product ion-icon{
+    cursor: pointer;
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img{
+    width: 75px;
+}
+
+.basketTotal{
+    width: 10%;
+}
+
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle{
+    width: 30%;
+}
+
+@media(max-width: 500px){
+    nav h2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sm-hide{
+        display: none;
+    }
+
+    .products,
+    .products-header{
+        justify-content: center;
+    }
+
+    .basketTotalContainer{
+        padding-right: 8%;
+    }
+}
